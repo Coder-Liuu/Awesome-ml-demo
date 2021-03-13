@@ -4,6 +4,6 @@
 ----
 
 示例代码:
-- [决策树](https://github.com/Coder-Liuu/machine-learning-examples/DecisionTree.py): [博客讲解](https://coder-liuu.github.io/2021/02/%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E5%86%B3%E7%AD%96%E6%A0%91/)
+- [决策树](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/DecisionTree.py): [博客讲解](https://coder-liuu.github.io/2021/02/%E5%8A%A8%E6%89%8B%E5%AE%9E%E7%8E%B0%E5%86%B3%E7%AD%96%E6%A0%91/)
 
 > 如果你给我一颗星星,那么我今天晚上就开一瓶香槟庆祝一下
