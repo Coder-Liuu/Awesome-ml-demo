@@ -10,6 +10,10 @@ class Node:
 
 class Leaf:
     def __init__(self,value):
+        """
+        如果是分类问题: value存储是每个类别的概率
+        如果是回归问题: value存储是均值
+        """
         self.value = value
 
 class DecisionTree:
@@ -44,7 +48,7 @@ class DecisionTree:
         self.root = None
 
         self.classifier = classifier
-        self.criterion = criterion
+        self.criterion = criterion if classifier else 'mse'
         self.max_depth = max_depth if max_depth else np.inf
 
     def fit(self, X, Y):
@@ -58,7 +62,7 @@ class DecisionTree:
         y : class:`ndarray<numpy.ndarray>` of shape (N,)
             对于训练集X中所有数据的标签
         """
-        self.n_classes = max(Y) + 1
+        self.n_classes = max(Y) + 1 if self.classifier else None
         self.n_feats = X.shape[1]
         self.root = self._grow(X,Y)
 
@@ -66,11 +70,21 @@ class DecisionTree:
         """
         决策树的生长
         """
-        # 成长结束时
+        # 如果标签都是一样，返回叶结点
         if len(set(Y)) == 1:
-            prob = np.zeros(self.n_classes)
-            prob[Y[0]] = 1.0
-            return Leaf(prob)
+            if self.classifier:
+                prob = np.zeros(self.n_classes)
+                prob[Y[0]] = 1.0
+                return Leaf(prob)
+            else:
+                return Leaf(Y[0])
+
+        # 如果到达最大深度，返回叶结点
+        if cur_depth > self.max_depth:
+            v = np.mean(Y,axis=0)
+            if self.classifier:
+                v = np.bincount(Y,minlength=self.n_classes) / len(Y)
+            return Leaf(v)
 
         cur_depth += 1
         N,M = X.shape
@@ -84,7 +98,6 @@ class DecisionTree:
         # 进行成长
         left = self._grow(X[l,:],Y[l],cur_depth)
         right = self._grow(X[r,:],Y[r],cur_depth)
-
         return Node(left,right,(feat,thresh))
 
     def _segment(self,X,Y,feat_idxs):
@@ -117,6 +130,8 @@ class DecisionTree:
         """
         if self.criterion == "entropy":
             loss = self.entropy
+        elif self.criterion == 'mse':
+            loss = self.mse
 
         parent_loss = loss(Y)
 
@@ -152,26 +167,39 @@ class DecisionTree:
         return np.array([self._traverse(x,self.root) for x in X])
 
     def _traverse(self,X,node):
+        """
+        使用数据来寻找结果
+        """
         if isinstance(node,Leaf):
-            return node.value.argmax()
+            if self.classifier:
+                return node.value.argmax()
+            return node.value
         if X[node.feature] <= node.threshold:
             return self._traverse(X,node.left)
         return self._traverse(X,node.right)
 
     def entropy(self,y):
+        """
+        计算数据集标签的信息熵
+        """
         hist = np.bincount(y)
         ps = hist / np.sum(hist)
         return  -np.sum([p * np.log2(p) for p in ps if p > 0])
 
+    def mse(self,y):
+        """
+        计算数据集标签的均方误差
+        """
+        return np.mean( (y-np.mean(y)) ** 2)
 
 if __name__ == "__main__":
     import pandas as pd
 
-    data = pd.read_csv("iris0.csv")
+    data = pd.read_csv("data/iris0.csv")
     data = data.sample(frac=1).reset_index(drop=True)
 
     labels = data.pop("class")
-    clf = DecisionTree()
+    clf = DecisionTree(classifier=False)
     clf.fit(data.values,labels.values)
     preds = clf.predict((data.values))
     print(labels.values)
