@@ -6,5 +6,9 @@
 
 示例代码:
 - [决策树完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/DecisionTree.py): [博客讲解](https://coder-liuu.github.io/2021/02/ml-decision-tree/)
+- [KMeans](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/KMeans.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-kmeans/)
+- [线性回归](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LinearRegression.py): 暂无博客讲解
+
+- [岭回归](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): 暂无博客讲解
 
 > 如果你给我一颗星星,那么我今天晚上就开一瓶香槟庆祝一下

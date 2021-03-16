@@ -42,18 +42,21 @@ class KMeans:
         for i in range(self.max_iter):
             new_center = np.zeros((self.n_cluster,n_features))
             new_count = np.zeros(self.n_cluster)
-            dis = np.array([self.distances(x) for x in X] )
+            dis = np.array([self.distances(x) for x in X],dtype=np.float )
             dismin = np.argmin(dis,axis=1)
             for id_,j in enumerate(dismin):
                 new_center[j] += X[id_]
                 new_count[j] += 1
 
-            if self.verbose:
-                print("聚类中心变化:",new_center/ (new_count[:,None]))
+            new_center = new_center / (new_count[:,None])
 
             if (self.center == new_center).all():
                 break
+
             self.center = new_center
+
+            if self.verbose:
+                print("聚类中心变化:",self.center)
 
     def predict(self, X):
         """
@@ -79,8 +82,8 @@ class KMeans:
         return dis
 
 if __name__ == "__main__":
-    data = np.array([[1,2,3],[4,5,5],[6,7,8]])
-    k = KMeans(n_cluster=2,max_iter=50)
+    data = np.array([[1,3],[1,4],[3,5],[5,5]])
+    k = KMeans(n_cluster=2,max_iter=50,verbose=False)
     k.fit(data)
     y = k.predict(data)
     print(y)
