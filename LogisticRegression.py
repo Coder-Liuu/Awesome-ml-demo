@@ -49,6 +49,9 @@ class LogisticRegression:
             self.beta -= self.lr * self.grad(X, y, y_prob)
 
     def predict_prob(self, X):
+        """
+        使用模型进行预测标签的概率值
+        """
         if self.fit_intercept:
             X = np.c_[np.ones(X.shape[0]), X]
         y_prob = self.sigmoid(X @ self.beta)
@@ -57,7 +60,7 @@ class LogisticRegression:
 
     def predict(self, X):
         """
-        使用模型进行预测
+        使用模型进行预测标记值
         """
         y_prob = self.predict_prob(X)
         y_pred = np.where(y_prob > 0.5,1,0)
