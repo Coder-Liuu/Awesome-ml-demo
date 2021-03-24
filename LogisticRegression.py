@@ -1,7 +1,7 @@
 import numpy as np
 
 class LogisticRegression:
-    def __init__(self, lr=0.01, tol=1e-4, max_iter=1e3, fit_intercept=True):
+    def __init__(self, lr=0.01, tol=1e-4, max_iter=1e3, fit_intercept=True,verbose=0, seed=None):
         """
         通过梯度下降方法来求解逻辑回归的参数
 
@@ -15,12 +15,19 @@ class LogisticRegression:
             最大迭代次数
         fit_intercept : bool
             是否在线性回归中，添加截距项。 默认为True
+        verbose : bool
+            是否打印误差的变化过程
+        sedd : int or None
+            随机种子
         """
+        if seed:
+            np.random.seed(seed)
         self.beta = None
         self.lr = lr
         self.tol = tol
         self.max_iter = max_iter
         self.fit_intercept = fit_intercept
+        self.verbose = verbose
 
     def fit(self, X, y):
         """
@@ -34,20 +41,27 @@ class LogisticRegression:
         for _ in range(int(self.max_iter)):
             y_prob = self.sigmoid(X @ self.beta)
             loss = self.loss(X, y, y_prob)
-            print("loss:",loss)
+            if self.verbose:
+                print("loss:",loss)
             if prev_loss - loss < self.tol:
                 break
             prev_loss = loss
             self.beta -= self.lr * self.grad(X, y, y_prob)
 
-    def predict(self, X):
-        """
-        使用模型进行预测
-        """
+    def predict_prob(self, X):
         if self.fit_intercept:
             X = np.c_[np.ones(X.shape[0]), X]
         y_prob = self.sigmoid(X @ self.beta)
         return y_prob
+
+
+    def predict(self, X):
+        """
+        使用模型进行预测
+        """
+        y_prob = self.predict_prob(X)
+        y_pred = np.where(y_prob > 0.5,1,0)
+        return y_pred
 
     def grad(self, X, y, y_prob):
         """
@@ -80,8 +94,7 @@ if __name__ == "__main__":
     y = labels.values - 1
     clf = LogisticRegression(lr=0.01)
     clf.fit(data.values,y)
-    preds = clf.predict((data.values))
-    y_pred = np.where(preds > 0.5,1,0)
+    y_pred = clf.predict((data.values))
     print( sum(y == y_pred) / len(y) )
 
     from sklearn.linear_model import LogisticRegression as LR
