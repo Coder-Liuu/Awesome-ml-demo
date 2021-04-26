@@ -22,8 +22,8 @@
 - [岭回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
 - [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
 
-## 三、鼓励和联系作者
+## 三、鼓励和联系作者 :four_leaf_clover:
 
-如果本书对你有所帮助，想鼓励一下作者，记得给本项目加一颗星星:star:，并分享给你的朋友们喔:blush:!
+如果本项目对你有所帮助，想鼓励一下作者，记得给本项目加一颗星星:star:，并分享给你的朋友们喔:blush:!
 
 如果发现项目中的问题，可以进行提出issues或者联系我Coder-Liuu#163.com~
