@@ -18,7 +18,7 @@
 - [岭回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
 - [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
 
-- [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 博客讲解暂无
+- [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralCluster.py): 博客讲解暂无
 
 - [ ] 数据结构KDTree  
 
