@@ -1,13 +1,13 @@
 import numpy as np
 
 class KMeans:
-    def __init__(self, n_cluster, max_iter=300, verbose=0, seed=None):
+    def __init__(self, n_clusters, max_iter=300, verbose=0, seed=None):
         """
         无监督聚类算法Kmeans
 
         Parameters
         ----------
-        n_cluster : int
+        n_clusters : int
             聚类簇的数量
 
         max_iter: int
@@ -24,7 +24,7 @@ class KMeans:
         self.verbose = verbose
         self.center = None
         self.max_iter = max_iter
-        self.n_cluster = n_cluster
+        self.n_clusters = n_clusters
 
     def fit(self, X):
         """
@@ -37,11 +37,11 @@ class KMeans:
         """
 
         n_samples, n_features = X.shape
-        self.center = np.random.permutation(X)[:self.n_cluster]
+        self.center = np.random.permutation(X)[:self.n_clusters]
 
         for i in range(self.max_iter):
-            new_center = np.zeros((self.n_cluster,n_features))
-            new_count = np.zeros(self.n_cluster)
+            new_center = np.zeros((self.n_clusters,n_features))
+            new_count = np.zeros(self.n_clusters)
             dis = np.array([self.distances(x) for x in X],dtype=np.float )
             dismin = np.argmin(dis,axis=1)
             for id_,j in enumerate(dismin):
@@ -83,7 +83,7 @@ class KMeans:
 
 if __name__ == "__main__":
     data = np.array([[1,3],[1,4],[3,5],[5,5]])
-    k = KMeans(n_cluster=2,max_iter=50,verbose=False)
+    k = KMeans(n_clusters=2,max_iter=50,verbose=False)
     k.fit(data)
     y = k.predict(data)
     print(y)

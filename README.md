@@ -9,11 +9,7 @@
 
 手写机器学习的算法，以最简单为标准，此开源项目中的个个算法之间尽量保证独立性，帮助初学者快速根据原理实现 Machine Learning 中的算法。
 
-下面我个人在学习机器学习中的感受图：
-
-![感受图片](https://gitee.com/liu__yang/image/raw/master/img/ml-image.png)
-
-老师讲课感觉还行，不是很难，等到自己实践时，只会敲一个Hello，Wolrd:cold_sweat:。
+个人在学习机器学习中的感受，老师讲课感觉还行，不是很难，等到自己实践时，只会敲一个Hello，Wolrd:cold_sweat:。
 
 ## 二、目前进度 :alarm_clock:
 - [决策树完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/DecisionTree.py): [博客讲解](https://coder-liuu.github.io/2021/02/ml-decision-tree/)
@@ -21,6 +17,10 @@
 - [线性回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LinearRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
 - [岭回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
 - [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
+
+- [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 博客讲解暂无
+
+- [  ] KDTree
 
 ## 三、鼓励和联系作者 :four_leaf_clover:
 
