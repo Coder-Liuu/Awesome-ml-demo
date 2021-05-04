@@ -5,7 +5,7 @@ np.set_printoptions(suppress=True)
 
 
 class SpectralCluster:
-    def __init__(self, n_clusters=2, affinity="full_link", n_neighbors=9, sigma=1.0, seed=None):
+    def __init__(self, n_clusters=2, affinity="nearest_neighbors", n_neighbors=10, sigma=1.0, seed=None):
         """
         谱聚类模型
 
@@ -105,6 +105,5 @@ class SpectralCluster:
 if __name__ == '__main__':
     x = np.load("data/circles.npy")
 
-    y_pred = SpectralCluster(
-        n_clusters=2, affinity="full_link", n_neighbors=9).fit_predict(x)
+    y_pred = SpectralCluster(n_clusters=2, affinity="nearest_neighbors").fit_predict(x)
     plot_cluster(x, y_pred)
