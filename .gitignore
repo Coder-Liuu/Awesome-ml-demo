@@ -1,2 +1,4 @@
 temp/*
 .vim/*
+__pycache__/*
+ploter/__pycache__/*
