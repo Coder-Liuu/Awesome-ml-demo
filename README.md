@@ -7,7 +7,7 @@
 
 ## 一、项目风格 :watermelon:
 
-手写机器学习的算法，以最简单为标准，此开源项目中的个个算法之间尽量保证独立性，帮助初学者快速根据原理实现 Machine Learning 中的算法。
+手写机器学习的算法，以`简单和简洁`为标准，此开源项目中的个个算法之间尽量保证独立性，帮助初学者快速根据原理实现 Machine Learning 中的算法。
 
 个人在学习机器学习中的感受，老师讲课感觉还行，不是很难，等到自己实践时，只会敲一个Hello，Wolrd:cold_sweat:。
 
@@ -20,7 +20,7 @@
 
 - [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 博客讲解暂无
 
-- [  ] KDTree
+- [ ] 数据结构KDTree  
 
 ## 三、鼓励和联系作者 :four_leaf_clover:
 
