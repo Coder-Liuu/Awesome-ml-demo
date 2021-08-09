@@ -12,13 +12,13 @@
 个人在学习机器学习中的感受，老师讲课感觉还行，不是很难，等到自己实践时，只会敲一个Hello，Wolrd:cold_sweat:。
 
 ## 二、目前进度 :alarm_clock:
-- [决策树完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/DecisionTree.py): [博客讲解](https://coder-liuu.github.io/2021/02/ml-decision-tree/)
-- [KMeans完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/KMeans.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-kmeans/)
-- [线性回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LinearRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
-- [岭回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-linearregression/)
-- [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [博客讲解](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
-- [Apriori算法完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/Apriori.py): [博客讲解](https://coder-liuu.github.io/2021/08/review-aprioir/)
-- [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 博客讲解暂无
+- [决策树完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/DecisionTree.py): [个人笔记](https://coder-liuu.github.io/2021/02/ml-decision-tree/)
+- [KMeans完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/KMeans.py): [个人笔记](https://coder-liuu.github.io/2021/03/ml-kmeans/)
+- [线性回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LinearRegression.py): [个人笔记](https://coder-liuu.github.io/2021/03/ml-linearregression/)
+- [岭回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/RidgeRegression.py): [个人笔记](https://coder-liuu.github.io/2021/03/ml-linearregression/)
+- [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [个人笔记](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
+- [Apriori算法完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/Apriori.py): [个人笔记](https://coder-liuu.github.io/2021/08/review-aprioir/)
+- [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 个人笔记暂无
 
 - [ ] 数据结构KDTree
 
