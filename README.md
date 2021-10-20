@@ -19,7 +19,7 @@
 - [逻辑回归完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/LogisticRegression.py): [个人笔记](https://coder-liuu.github.io/2021/03/ml-logisticregression/)
 - [Apriori算法完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/Apriori.py): [个人笔记](https://coder-liuu.github.io/2021/08/review-aprioir/)
 - [谱聚类完整代码](https://github.com/Coder-Liuu/machine-learning-examples/blob/main/SpectralClustering.py): 个人笔记暂无
-
+- [遗传算法完整代码](https://github.com/Coder-Liuu/Awesome-ml-demo/blob/main/GA.py): 个人笔记暂无
 - [ ] 数据结构KDTree
 
 ## 三、鼓励和联系作者 :four_leaf_clover:
